@@ -1,4 +1,4 @@
-bind = '83.222.11.137'
+bind = '83.222.11.137:8000'
 workers = 3
-user = "admin"
-timeout = 120
+user = "gen_user"
+timeout = 60

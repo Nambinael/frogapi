@@ -84,11 +84,12 @@ WSGI_APPLICATION = 'FrogRestFramework.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': '147.45.107.100',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': '147.45.151.28',
+        'PORT': '5432',
         'NAME': 'default_db',
         'USER': 'gen_user',
-        'PASSWORD': 'QWErty1056.'
+        'PASSWORD': '2V!~dNqyNbNW\y'
     }
 }
 
