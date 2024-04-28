@@ -18,6 +18,8 @@ class Employee(models.Model):
     surname = models.CharField(verbose_name='Фамилия', max_length=50)
     name = models.CharField(verbose_name='Имя', max_length=50)
     patronymic = models.CharField(verbose_name='Отчество', max_length=50, null=True, default='-')
+    login = models.CharField(verbose_name='Логин', max_length=50, default='-')
+    password = models.CharField(verbose_name='Пароль', max_length=50, default='-')
 
     def __str__(self):
         return f"{self.surname} {self.name} {self.patronymic} - {self.employee_role.name}"
