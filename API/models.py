@@ -110,7 +110,6 @@ class MFPCartridge(models.Model):
 class PC(models.Model):
     equipment = models.OneToOneField(Equipment, verbose_name='Какое оборудование является ПК?',  on_delete=models.CASCADE, primary_key=True)
     characteristics = models.TextField(verbose_name='Характеристики')
-    commentary = models.TextField(verbose_name='Комментарий к ПК', blank=True, default='')
 
     def __str__(self):
         return f"ПК {self.equipment.name}"
