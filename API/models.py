@@ -133,7 +133,7 @@ class RequestStatus(models.Model):
 
 
 class Requests(models.Model):
-    employee = models.ForeignKey(EmployeeRole, verbose_name='Сотрудник', on_delete=models.CASCADE)
+    employee = models.ForeignKey(Employee, verbose_name='Сотрудник', on_delete=models.CASCADE)
     status = models.ForeignKey(RequestStatus, verbose_name='Статус заявки',  on_delete=models.CASCADE)
     equipment = models.ForeignKey(Equipment, verbose_name='Оборудование',  on_delete=models.CASCADE)
     commentary = models.TextField(verbose_name='Комментарий')
