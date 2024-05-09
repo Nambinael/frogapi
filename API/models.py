@@ -31,7 +31,7 @@ class Employee(models.Model):
 #Карта
 class Map(models.Model):
     name = models.CharField(verbose_name='Название', max_length=50)
-    image = models.ImageField(verbose_name='Изображение карты', upload_to='FrogRestFramework/static/img')
+    image = models.ImageField(verbose_name='Изображение карты', upload_to='static/img')
 
     def __str__(self):
         return f"Карта {self.name}"
