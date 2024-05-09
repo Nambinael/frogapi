@@ -5,6 +5,7 @@ from .models import *
 admin.site.register(EmployeeRole)
 admin.site.register(Employee)
 admin.site.register(Equipment)
+admin.site.register(Map)
 admin.site.register(MFPType)
 admin.site.register(MFP)
 admin.site.register(MFPColour)

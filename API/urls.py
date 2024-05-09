@@ -6,6 +6,7 @@ router = routers.DefaultRouter()
 
 router.register(r'employeeroles', EmployeeRoleViewSet, basename='EmployeeRole')
 router.register(r'employees', EmployeeViewSet, basename='Employee')
+router.register(r'map', MapViewSet, basename='Map')
 router.register(r'equipments', EquipmentViewSet, basename='Equipment')
 router.register(r'mfptypes', MFPTypeViewSet, basename='MFPType')
 router.register(r'mfp', MFPViewSet, basename='MFP')

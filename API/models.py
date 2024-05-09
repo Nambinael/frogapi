@@ -28,14 +28,27 @@ class Employee(models.Model):
         verbose_name = "Сотрудник"
         verbose_name_plural = "Сотрудники"
 
+#Карта
+class Map(models.Model):
+    name = models.CharField(verbose_name='Название', max_length=50)
+    image = models.ImageField(verbose_name='Изображение карты', upload_to='FrogRestFramework/static/img')
+
+    def __str__(self):
+        return f"Карта {self.name}"
+
+    class Meta:
+        verbose_name = "Карта"
+        verbose_name_plural = "Карты"
+
 
 #Общее оборудование
-
 class Equipment(models.Model):
     name = models.CharField(verbose_name='Название', max_length=50)
     description = models.CharField(verbose_name='Краткое описание', max_length=50, blank=True, default='')
     x_position = models.DecimalField(verbose_name='Позиция по X для карты', max_digits=6, decimal_places=2)
     y_position = models.DecimalField(verbose_name='Позиция по Y для карты', max_digits=6, decimal_places=2)
+    is_in_stock = models.BooleanField(verbose_name='На складе?', default=False)
+    map = models.ForeignKey(Map, verbose_name='На какой карте оборудование находится', on_delete=models.PROTECT, null=True)
     last_update = models.DateTimeField(verbose_name='Последняя проверка', auto_now_add=True)
 
     def __str__(self):

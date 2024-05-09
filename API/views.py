@@ -17,6 +17,11 @@ class EmployeeViewSet(viewsets.ModelViewSet):
     serializer_class = EmployeeSerializer
 
 
+class MapViewSet(viewsets.ModelViewSet):
+    queryset = Map.objects.all()
+    serializer_class = MapSerializer
+
+
 class EquipmentViewSet(viewsets.ModelViewSet):
     queryset = Equipment.objects.all()
     serializer_class = EquipmentSerializer

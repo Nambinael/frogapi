@@ -14,6 +14,12 @@ class EmployeeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class MapSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Map
+        fields = '__all__'
+
+
 class EquipmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Equipment
